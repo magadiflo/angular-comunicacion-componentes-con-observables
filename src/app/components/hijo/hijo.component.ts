@@ -16,7 +16,10 @@ export class HijoComponent implements OnInit {
   ngOnInit() {
     this.dataService.nombre$
       .subscribe((nombre: string) => {
-        console.log('Hijo: ' + nombre);        
+        //* Veremos que en el console.log este se está repitiendo varias veces porque, si bien es cierto,
+        //* este componente HijoComponent, se destruye, pero la subscripción realizada al nombre$ sigue
+        //* estando en memoria
+        console.log('Hijo: ' + nombre); 
         this.mensaje = nombre;
       });
   }

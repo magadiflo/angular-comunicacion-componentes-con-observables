@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.dataService.nombre$
       .subscribe((nombre: string) => {
-        console.log(`Navbar: ${nombre}`);      
+        console.log(`Navbar: ${nombre}`);//* Veremos que esto en el console.log mostrará siempre el mismo por que NO SE ESTÁ DESTRUYENDO, es el mismo NAVBAR
         this.mensaje = nombre;
       });
   }
