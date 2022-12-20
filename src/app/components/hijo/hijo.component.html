@@ -1,3 +1,5 @@
 <h3>Hijo component</h3>
 <hr>
-<h5>{{ mensaje }}</h5>
+<!-- * <h5>{{ mensaje }}</h5> -->
+<!--* Cuando trabajemos directamente con el pipe async, este llamará automáticamente al unsubscribe() cuando ya no necesitemos esa información-->
+<h5>{{ dataService.nombre$ | async }}</h5>
