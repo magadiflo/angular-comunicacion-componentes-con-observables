@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { DataService } from '../../services/data.service';
+
 @Component({
   selector: 'app-hijo',
   templateUrl: './hijo.component.html',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HijoComponent implements OnInit {
 
-  constructor() { }
+  mensaje: string = 'Mensaje...!'; 
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.nombre$
+      .subscribe((nombre: string) => {
+        this.mensaje = nombre;
+      });
   }
 
 }
