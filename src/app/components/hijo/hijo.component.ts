@@ -16,6 +16,7 @@ export class HijoComponent implements OnInit {
   ngOnInit() {
     this.dataService.nombre$
       .subscribe((nombre: string) => {
+        console.log('Hijo: ' + nombre);        
         this.mensaje = nombre;
       });
   }

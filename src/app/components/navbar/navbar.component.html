@@ -8,10 +8,8 @@
 
     <div>
         <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home</a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-item nav-link" routerLinkActive="active" [routerLink]="['/home']">Home</a>
+            <a class="nav-item nav-link" routerLinkActive="active" [routerLink]="['/pricing']">Pricing</a>
         </div>
     </div>
 </nav>

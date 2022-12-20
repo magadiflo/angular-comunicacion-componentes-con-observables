@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
 import { NavbarComponent } from './navbar/navbar.component';
 import { HijoComponent } from './hijo/hijo.component';
 
@@ -15,7 +17,8 @@ import { HijoComponent } from './hijo/hijo.component';
     HijoComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
   ]
 })
 export class ComponentsModule { }

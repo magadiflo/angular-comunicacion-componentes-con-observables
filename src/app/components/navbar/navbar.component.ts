@@ -15,7 +15,10 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.dataService.nombre$
-      .subscribe((nombre: string) => this.mensaje = nombre);
+      .subscribe((nombre: string) => {
+        console.log(`Navbar: ${nombre}`);      
+        this.mensaje = nombre;
+      });
   }
 
 }

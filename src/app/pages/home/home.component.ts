@@ -13,8 +13,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  cambiarNombre(): void {
-    console.log('NavBar: Martín Díaz');    
+  cambiarNombre(): void {   
     this.dataService.nombre$.emit('Martín Díaz');
   }
 
